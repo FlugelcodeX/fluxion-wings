@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FLUXION WINGS — Crispy. Juicy. Unli.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="#home" class="logo">
+          <span class="logo-mark">F</span>
+          <span>FLUXION</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#flavors">Flavors</a>
+          <a href="#promo">Promos</a>
+          <a href="#about">About</a>
+          <a href="#location">Location</a>
+
+          <a href="#order" class="nav-order"> ORDER NOW </a>
+        </nav>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open navigation">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-background-text">WINGS</div>
+
+        <div class="container hero-grid">
+          <div class="hero-content reveal">
+            <div class="hero-badge">
+              <span></span>
+              Freshly fried every day
+            </div>
+
+            <h1 class="hero-title">
+              FLUXION
+
+              <br />
+
+              <span class="red"> WINGS. </span>
+
+              <br />
+
+              <span class="yellow"> UNLI. </span>
+            </h1>
+
+            <p class="hero-text">
+              Crispy on the outside. Juicy on the inside. Tossed in flavors made
+              to keep you coming back for just one more wing.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#flavors" class="btn btn-primary">
+                EXPLORE FLAVORS
+                <span>→</span>
+              </a>
+
+              <a href="#promo" class="btn btn-secondary"> SEE UNLI PROMO </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="hero-circle"></div>
+
+            <div class="hero-food">
+              <img
+                src="https://img.cdn4dd.com/cdn-cgi/image/fit%3Dcontain%2Cformat%3Dauto/https%3A/doordash-static.s3.amazonaws.com/media/store/header/b51f6a49-f106-4913-98b9-2ae101e45032.png"
+                alt="Assorted chicken wings" />
+            </div>
+
+            <div class="hero-sticker">
+              UNLI
+              <br />
+              CHICKEN
+              <br />
+              <span>🔥</span>
+            </div>
+
+            <div class="hero-price">
+              <small> Starting at </small>
+
+              <strong> ₱99 </strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             MARQUEE
+        ========================== -->
+
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="marquee-item">
+            CRISPY
+            <span>✦</span>
+
+            JUICY
+            <span>✦</span>
+
+            SAUCY
+            <span>✦</span>
+
+            UNLI
+            <span>✦</span>
+
+            FLUXION WINGS
+            <span>✦</span>
+          </div>
+
+          <div class="marquee-item">
+            CRISPY
+            <span>✦</span>
+
+            JUICY
+            <span>✦</span>
+
+            SAUCY
+            <span>✦</span>
+
+            UNLI
+            <span>✦</span>
+
+            FLUXION WINGS
+            <span>✦</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+             PROMO
+        ========================== -->
+
+      <section class="section promo-section" id="promo">
+        <div class="container">
+          <div class="promo-card reveal">
+            <div class="promo-background">UNLI</div>
+
+            <div class="promo-content">
+              <div class="promo-kicker">The deal everyone's talking about</div>
+
+              <h2 class="promo-title">
+                UNLI
+                <br />
+                CHICKEN
+              </h2>
+
+              <div class="promo-price">
+                <span> ONLY </span>
+
+                <strong> ₱199 </strong>
+              </div>
+
+              <div class="promo-details">
+                <span> UNLI CHICKEN </span>
+
+                <span> UNLI RICE </span>
+
+                <span> UNLI GRAVY </span>
+              </div>
+
+              <a href="#order" class="btn promo-button">
+                I'M HUNGRY
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             FLAVORS
+        ========================== -->
+
+      <section class="section flavors" id="flavors">
+        <div class="container">
+          <div class="flavors-header reveal">
+            <div>
+              <div class="section-label">The Flavor Lab</div>
+
+              <h2 class="section-title">
+                PICK
+                <br />
+
+                YOUR
+                <br />
+
+                FLAVOR.
+              </h2>
+
+              <p class="section-description">
+                From sweet and smoky to straight-up fire, every wing is tossed
+                fresh in your chosen Fluxion flavor.
+              </p>
+            </div>
+
+            <div class="flavor-filters">
+              <button class="filter-btn active" data-filter="all">ALL</button>
+
+              <button class="filter-btn" data-filter="classic">CLASSIC</button>
+
+              <button class="filter-btn" data-filter="sweet">SWEET</button>
+
+              <button class="filter-btn" data-filter="spicy">SPICY</button>
+            </div>
+          </div>
+
+          <div class="flavor-grid">
+            <!-- ORIGINAL CRUNCH -->
+
+            <article
+              class="flavor-card reveal"
+              data-category="classic"
+              data-name="Original Crunch"
+              data-price="₱129"
+              data-description="Our signature crispy chicken tossed with our secret savory seasoning. Simple, crunchy, and dangerously addictive."
+              data-spice="1">
+              <div class="flavor-image">
+                <img
+                  src="https://thewoksoflife.com/wp-content/uploads/2015/04/fried-chicken-wings-5.jpg"
+                  alt="Crispy chicken wings" />
+
+                <div class="image-overlay"></div>
+
+                <span class="flavor-badge"> BEST SELLER </span>
+              </div>
+
+              <div class="flavor-body">
+                <div class="flavor-top">
+                  <h3 class="flavor-name">Original Crunch</h3>
+
+                  <span class="flavor-price"> ₱129 </span>
+                </div>
+
+                <p class="flavor-description">
+                  Signature crispy chicken with our secret savory seasoning.
+                </p>
+
+                <div class="spice">
+                  <span> HEAT </span>
+
+                  <div class="spice-bars">
+                    <i class="active"></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- INFERNO -->
+
+            <article
+              class="flavor-card reveal"
+              data-category="spicy"
+              data-name="Inferno Buffalo"
+              data-price="₱139"
+              data-description="Tangy, buttery and unapologetically spicy. This one brings serious heat while keeping every bite juicy."
+              data-spice="5">
+              <div class="flavor-image">
+                <img
+                  src="https://conteudo.imguol.com.br/c/entretenimento/e0/2022/05/11/vai-ter-churras---buffalo-wings-1652278388132_v2_4x3.jpg"
+                  alt="Buffalo chicken wings" />
+
+                <div class="image-overlay"></div>
+
+                <span class="flavor-badge hot"> HOT </span>
+              </div>
+
+              <div class="flavor-body">
+                <div class="flavor-top">
+                  <h3 class="flavor-name">Inferno Buffalo</h3>
+
+                  <span class="flavor-price"> ₱139 </span>
+                </div>
+
+                <p class="flavor-description">
+                  Tangy buffalo sauce with buttery heat and a serious kick.
+                </p>
+
+                <div class="spice">
+                  <span> HEAT </span>
+
+                  <div class="spice-bars">
+                    <i class="active"></i>
+                    <i class="active"></i>
+                    <i class="active"></i>
+                    <i class="active"></i>
+                    <i class="active"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- HONEY BLAZE -->
+
+            <article
+              class="flavor-card reveal"
+              data-category="sweet"
+              data-name="Honey Blaze"
+              data-price="₱139"
+              data-description="Sweet golden honey glaze balanced with a mild chili kick. The perfect flavor for sweet-and-spicy lovers."
+              data-spice="2">
+              <div class="flavor-image">
+                <img
+                  src="https://www.sugarsaltmagic.com/wp-content/uploads/2021/04/Sticky-Honey-Soy-Chicken-Wings-B-1-500x500.jpg"
+                  alt="Honey glazed chicken wings" />
+
+                <div class="image-overlay"></div>
+
+                <span class="flavor-badge"> FAN FAVORITE </span>
+              </div>
+
+              <div class="flavor-body">
+                <div class="flavor-top">
+                  <h3 class="flavor-name">Honey Blaze</h3>
+
+                  <span class="flavor-price"> ₱139 </span>
+                </div>
+
+                <p class="flavor-description">
+                  Golden honey glaze with a subtle chili kick.
+                </p>
+
+                <div class="spice">
+                  <span> HEAT </span>
+
+                  <div class="spice-bars">
+                    <i class="active"></i>
+                    <i class="active"></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- GARLIC PARMESAN -->
+
+            <article
+              class="flavor-card reveal"
+              data-category="classic"
+              data-name="Garlic Parmesan"
+              data-price="₱149"
+              data-description="Creamy parmesan and roasted garlic come together for a rich, savory flavor that hits differently with every crunch."
+              data-spice="1">
+              <div class="flavor-image">
+                <img
+                  src="https://www.diamondcabaretstlouis.com/images/sites/103/10387/wings-diamond1.jpg"
+                  alt="Crispy chicken wings with dipping sauce" />
+
+                <div class="image-overlay"></div>
+              </div>
+
+              <div class="flavor-body">
+                <div class="flavor-top">
+                  <h3 class="flavor-name">Garlic Parmesan</h3>
+
+                  <span class="flavor-price"> ₱149 </span>
+                </div>
+
+                <p class="flavor-description">
+                  Roasted garlic, parmesan and creamy savory goodness.
+                </p>
+
+                <div class="spice">
+                  <span> HEAT </span>
+
+                  <div class="spice-bars">
+                    <i class="active"></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- KOREAN FIRE -->
+
+            <article
+              class="flavor-card reveal"
+              data-category="spicy"
+              data-name="Korean Fire"
+              data-price="₱149"
+              data-description="Korean-inspired gochujang glaze with sweet notes, deep umami flavor and a lingering spicy finish."
+              data-spice="4">
+              <div class="flavor-image">
+                <img
+                  src="https://conteudo.imguol.com.br/c/entretenimento/e0/2022/05/11/vai-ter-churras---buffalo-wings-1652278388132_v2_4x3.jpg"
+                  alt="Saucy chicken wings" />
+
+                <div class="image-overlay"></div>
+
+                <span class="flavor-badge hot"> SPICY </span>
+              </div>
+
+              <div class="flavor-body">
+                <div class="flavor-top">
+                  <h3 class="flavor-name">Korean Fire</h3>
+
+                  <span class="flavor-price"> ₱149 </span>
+                </div>
+
+                <p class="flavor-description">
+                  Gochujang glaze with sweet heat and deep umami flavor.
+                </p>
+
+                <div class="spice">
+                  <span> HEAT </span>
+
+                  <div class="spice-bars">
+                    <i class="active"></i>
+                    <i class="active"></i>
+                    <i class="active"></i>
+                    <i class="active"></i>
+                    <i></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- BBQ -->
+
+            <article
+              class="flavor-card reveal"
+              data-category="sweet"
+              data-name="Smokey BBQ"
+              data-price="₱139"
+              data-description="Slow-smoked BBQ flavor with a sweet, smoky glaze that gives every crispy wing a rich backyard-grill taste."
+              data-spice="1">
+              <div class="flavor-image">
+                <img
+                  src="https://conteudo.imguol.com.br/c/entretenimento/e0/2022/05/11/vai-ter-churras---buffalo-wings-1652278388132_v2_4x3.jpg"
+                  alt="BBQ chicken wings" />
+
+                <div class="image-overlay"></div>
+              </div>
+
+              <div class="flavor-body">
+                <div class="flavor-top">
+                  <h3 class="flavor-name">Smokey BBQ</h3>
+
+                  <span class="flavor-price"> ₱139 </span>
+                </div>
+
+                <p class="flavor-description">
+                  Sweet, smoky BBQ glaze with a rich grilled finish.
+                </p>
+
+                <div class="spice">
+                  <span> HEAT </span>
+
+                  <div class="spice-bars">
+                    <i class="active"></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             ABOUT
+        ========================== -->
+
+      <section class="section about" id="about">
+        <div class="container why-grid">
+          <div class="reveal">
+            <div class="section-label">Why Fluxion?</div>
+
+            <h2 class="section-title">
+              MORE
+              <br />
+
+              THAN
+              <br />
+
+              WINGS.
+            </h2>
+
+            <p class="section-description">
+              We believe chicken should never be boring. That's why we obsess
+              over the crunch, the sauce, and the flavor in every single bite.
+            </p>
+          </div>
+
+          <div class="reveal">
+            <div class="why-number">01</div>
+
+            <div class="why-list">
+              <div class="why-item">
+                <div class="why-icon">01</div>
+
+                <div>
+                  <h3>FRIED FRESH</h3>
+
+                  <p>
+                    Every order is cooked fresh so you get that unmistakable
+                    crunch.
+                  </p>
+                </div>
+              </div>
+
+              <div class="why-item">
+                <div class="why-icon">02</div>
+
+                <div>
+                  <h3>BIG FLAVOR</h3>
+
+                  <p>
+                    Six signature sauces made to give every wing its own
+                    personality.
+                  </p>
+                </div>
+              </div>
+
+              <div class="why-item">
+                <div class="why-icon">03</div>
+
+                <div>
+                  <h3>COME HUNGRY</h3>
+
+                  <p>
+                    Our UNLI experience means you don't have to count your
+                    wings.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             REVIEWS
+        ========================== -->
+
+      <section class="section reviews">
+        <div class="container">
+          <div class="section-label reveal">The People Have Spoken</div>
+
+          <h2 class="section-title reveal">
+            WING
+            <br />
+            WORTHY.
+          </h2>
+
+          <div class="review-grid">
+            <article class="review reveal">
+              <div class="stars">★★★★★</div>
+
+              <p>
+                "The Honey Blaze is actually insane. I ordered one serving and
+                ended up ordering another four."
+              </p>
+
+              <div class="review-author">
+                <div class="avatar">M</div>
+
+                <div>
+                  <strong> Marco D. </strong>
+
+                  <small> Verified customer </small>
+                </div>
+              </div>
+            </article>
+
+            <article class="review reveal">
+              <div class="stars">★★★★★</div>
+
+              <p>
+                "Finally an unli chicken place where the chicken is still
+                crispy. The garlic parmesan is my weakness."
+              </p>
+
+              <div class="review-author">
+                <div class="avatar">A</div>
+
+                <div>
+                  <strong> Angela R. </strong>
+
+                  <small> Verified customer </small>
+                </div>
+              </div>
+            </article>
+
+            <article class="review reveal">
+              <div class="stars">★★★★★</div>
+
+              <p>
+                "Came for the promo. Stayed because the wings were ridiculously
+                good."
+              </p>
+
+              <div class="review-author">
+                <div class="avatar">J</div>
+
+                <div>
+                  <strong> Josh T. </strong>
+
+                  <small> Verified customer </small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             LOCATION / CONTACT
+        ========================== -->
+
+      <section class="section location-section" id="location">
+        <div class="container">
+          <div class="location-layout reveal">
+            <div class="location-photo">
+              <img
+                src="https://conteudo.imguol.com.br/c/entretenimento/e0/2022/05/11/vai-ter-churras---buffalo-wings-1652278388132_v2_4x3.jpg"
+                alt="Fluxion Wings chicken platter" />
+
+              <div class="location-photo-overlay">
+                <span> FLUXION WINGS </span>
+
+                <strong> COME HUNGRY. </strong>
+              </div>
+            </div>
+
+            <div class="location-info">
+              <div class="section-label">Visit Us</div>
+
+              <h2>
+                FIND
+                <br />
+                YOUR
+                <br />
+                WINGS.
+              </h2>
+
+              <div class="address-block">
+                <div class="address-icon">📍</div>
+
+                <div>
+                  <small> OUR ADDRESS </small>
+
+                  <p>
+                    123 Main Street,
+                    <br />
+                    Barangay Example,
+                    <br />
+                    Your City, Philippines
+                  </p>
+                </div>
+              </div>
+
+              <div class="location-detail">
+                <small> OPENING HOURS </small>
+
+                <p>
+                  Monday – Sunday
+                  <br />
+                  11:00 AM – 10:00 PM
+                </p>
+              </div>
+
+              <div class="location-detail">
+                <small> CONTACT </small>
+
+                <p>
+                  +63 900 000 0000
+                  <br />
+                  hello@fluxionwings.com
+                </p>
+              </div>
+
+              <div class="location-actions">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=123+Main+Street"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-primary">
+                  GET DIRECTIONS
+                  <span>→</span>
+                </a>
+
+                <a href="tel:+639000000000" class="btn btn-secondary">
+                  CALL US
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             FINAL CTA
+        ========================== -->
+
+      <section class="final-cta" id="order">
+        <div class="final-background-text">CRAVE</div>
+
+        <div class="container final-cta-content reveal">
+          <div class="section-label center">Your wings are waiting</div>
+
+          <h2>
+            COME
+            <br />
+
+            <span> HUNGRY. </span>
+          </h2>
+
+          <p>
+            Grab your friends, pick your flavors, and prepare for a serious
+            chicken situation.
+          </p>
+
+          <a
+            href="https://m.me/YOUR_FLUXION_WINGS_PAGE"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer">
+            ORDER NOW
+            <span>→</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="logo">
+              <span class="logo-mark"> F </span>
+
+              <span> FLUXION </span>
+            </div>
+
+            <p>Crispy chicken. Loud flavors. Zero boring bites.</p>
+          </div>
+
+          <div class="footer-links">
+            <a href="#home"> Home </a>
+
+            <a href="#flavors"> Flavors </a>
+
+            <a href="#promo"> Promos </a>
+
+            <a href="#about"> About </a>
+
+            <a href="#location"> Contact </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 FLUXION WINGS. All rights reserved. </span>
+
+          <span> CRISPY. JUICY. FLUXION. </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================
+         FLAVOR MODAL
+    ========================== -->
+
+    <div class="flavor-modal" id="flavorModal" aria-hidden="true">
+      <div class="modal-box">
+        <div class="modal-grid">
+          <div class="modal-image">
+            <img
+              src="https://www.diamondcabaretstlouis.com/images/sites/103/10387/wings-diamond1.jpg"
+              alt="Chicken wings" />
+          </div>
+
+          <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close">
+              ×
+            </button>
+
+            <div class="section-label">FLUXION FLAVOR</div>
+
+            <h2 id="modalName">Original Crunch</h2>
+
+            <div class="modal-price" id="modalPrice">₱129</div>
+
+            <p id="modalDescription">Our signature crispy chicken.</p>
+
+            <div class="modal-info">
+              <span id="modalSpice"> 🌶 Mild </span>
+
+              <span> 🍗 Freshly Fried </span>
+
+              <span> ✦ Signature Sauce </span>
+            </div>
+
+            <a href="#order" class="btn btn-primary" id="modalOrder">
+              ORDER THIS FLAVOR
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

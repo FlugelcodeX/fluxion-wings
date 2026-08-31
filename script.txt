@@ -1,0 +1,293 @@
+/* =========================================
+   FLUXION WINGS
+   Main JavaScript
+========================================= */
+
+/* =========================
+   NAVBAR
+========================= */
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 30) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+const menuToggle = document.getElementById("menuToggle");
+
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+
+  const isOpen = navLinks.classList.contains("open");
+
+  menuToggle.textContent = isOpen ? "×" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+
+    menuToggle.textContent = "☰";
+  });
+});
+
+/* =========================
+   FLAVOR FILTER
+========================= */
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+const flavorCards = document.querySelectorAll(".flavor-card");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    /* Remove active state */
+
+    filterButtons.forEach((filter) => {
+      filter.classList.remove("active");
+    });
+
+    /* Activate clicked button */
+
+    button.classList.add("active");
+
+    const selectedFilter = button.dataset.filter;
+
+    flavorCards.forEach((card) => {
+      const category = card.dataset.category;
+
+      if (selectedFilter === "all" || category === selectedFilter) {
+        card.classList.remove("hidden");
+
+        card.animate(
+          [
+            {
+              opacity: 0,
+              transform: "translateY(15px)",
+            },
+            {
+              opacity: 1,
+              transform: "translateY(0)",
+            },
+          ],
+          {
+            duration: 300,
+            easing: "ease-out",
+          },
+        );
+      } else {
+        card.classList.add("hidden");
+      }
+    });
+  });
+});
+
+/* =========================
+   FLAVOR MODAL
+========================= */
+
+const flavorModal = document.getElementById("flavorModal");
+
+const modalClose = document.getElementById("modalClose");
+
+const modalName = document.getElementById("modalName");
+
+const modalPrice = document.getElementById("modalPrice");
+
+const modalDescription = document.getElementById("modalDescription");
+
+const modalSpice = document.getElementById("modalSpice");
+
+/*
+    Convert numerical spice level
+    into readable text.
+*/
+
+function getSpiceText(level) {
+  switch (level) {
+    case 1:
+      return "🌶 Mild";
+
+    case 2:
+      return "🌶🌶 Sweet Heat";
+
+    case 3:
+      return "🌶🌶🌶 Medium";
+
+    case 4:
+      return "🌶🌶🌶🌶 Hot";
+
+    case 5:
+      return "🌶🌶🌶🌶🌶 Extreme";
+
+    default:
+      return "🌶 Mild";
+  }
+}
+
+/*
+    Open flavor details.
+*/
+
+function openFlavorModal(card) {
+  const name = card.dataset.name;
+
+  const price = card.dataset.price;
+
+  const description = card.dataset.description;
+
+  const spice = Number(card.dataset.spice);
+
+  modalName.textContent = name;
+
+  modalPrice.textContent = price;
+
+  modalDescription.textContent = description;
+
+  modalSpice.textContent = getSpiceText(spice);
+
+  flavorModal.classList.add("show");
+
+  flavorModal.setAttribute("aria-hidden", "false");
+
+  document.body.classList.add("modal-open");
+}
+
+/*
+    Close flavor details.
+*/
+
+function closeFlavorModal() {
+  flavorModal.classList.remove("show");
+
+  flavorModal.setAttribute("aria-hidden", "true");
+
+  document.body.classList.remove("modal-open");
+}
+
+/*
+    Attach modal click
+    to every flavor card.
+*/
+
+flavorCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    openFlavorModal(card);
+  });
+});
+
+/*
+    Close button.
+*/
+
+modalClose.addEventListener("click", closeFlavorModal);
+
+/*
+    Close by clicking
+    outside modal.
+*/
+
+flavorModal.addEventListener("click", (event) => {
+  if (event.target === flavorModal) {
+    closeFlavorModal();
+  }
+});
+
+/*
+    Close with ESC.
+*/
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && flavorModal.classList.contains("show")) {
+    closeFlavorModal();
+  }
+});
+
+/*
+    Prevent modal close when
+    clicking inside the box.
+*/
+
+const modalBox = document.querySelector(".modal-box");
+
+modalBox.addEventListener("click", (event) => {
+  event.stopPropagation();
+});
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.12,
+  },
+);
+
+revealElements.forEach((element) => {
+  revealObserver.observe(element);
+});
+
+/* =========================
+   SMOOTH NAVIGATION
+========================= */
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetID = link.getAttribute("href");
+
+    const target = document.querySelector(targetID);
+
+    if (!target) {
+      return;
+    }
+
+    event.preventDefault();
+
+    target.scrollIntoView({
+      behavior: "smooth",
+
+      block: "start",
+    });
+  });
+});
+
+/* =========================
+   INITIALIZATION
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  /*
+            Trigger elements already
+            visible when page loads.
+        */
+
+  revealElements.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight) {
+      element.classList.add("visible");
+    }
+  });
+});
